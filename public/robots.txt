@@ -1,0 +1,10 @@
+# robots.txt for YouTunes - Free Music for YouTube
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://youtunes-lol.pages.dev/sitemap.xml
+
+# Optimize crawling
+Crawl-delay: 1

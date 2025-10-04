@@ -5,27 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Free Music for YouTube Videos | Royalty-Free Background Music - YouTunes</title>
-    <meta name="title" content="Free Music for YouTube Videos | Royalty-Free Background Music - YouTunes">
-    <meta name="description" content="Download free, royalty-free background music for your YouTube videos. AI-generated copyright-free music updated daily. No attribution required. Perfect for content creators.">
-    <meta name="keywords" content="free music for youtube, royalty free music, copyright free music, youtube background music, no copyright music, free youtube music, youtube creator music, vlog music, streaming music, content creator music">
-    <meta name="author" content="YouTunes">
-    <meta name="robots" content="index, follow">
+    <title>YouTunes - Free Music for YouTube Videos</title>
+    <meta name="description" content="Free royalty-free music for YouTube. AI-generated tracks updated daily. No copyright claims, no attribution required.">
+    <meta name="keywords" content="free music for youtube, royalty free music, copyright free music, youtube background music">
     <link rel="canonical" href="https://youtunes.lol/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://youtunes.lol/">
-    <meta property="og:title" content="Free Music for YouTube Videos | Royalty-Free Background Music">
-    <meta property="og:description" content="Download free, royalty-free background music for your YouTube videos. AI-generated copyright-free music updated daily.">
-    <meta property="og:image" content="https://youtunes.lol/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://youtunes.lol/">
-    <meta property="twitter:title" content="Free Music for YouTube Videos | Royalty-Free Background Music">
-    <meta property="twitter:description" content="Download free, royalty-free background music for your YouTube videos. AI-generated copyright-free music updated daily.">
-    <meta property="twitter:image" content="https://youtunes.lol/og-image.jpg">
+    <meta property="og:title" content="YouTunes - Free Music for YouTube Videos">
+    <meta property="og:description" content="Free royalty-free music for YouTube. AI-generated tracks updated daily.">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -42,507 +31,103 @@
         }
     }
     </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MusicGroup",
-        "name": "YouTunes",
-        "genre": ["Electronic", "Ambient", "Lo-Fi", "Cinematic"],
-        "description": "AI-generated royalty-free music for YouTube creators"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "Is this music really free for YouTube?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! All music on YouTunes is 100% free to use in your YouTube videos, Twitch streams, podcasts, and any other content. No payment required."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Will I get copyright claims using this music?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. Our music is AI-generated and royalty-free. You won't receive copyright strikes or Content ID claims on YouTube."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do I need to credit or attribute YouTunes?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No attribution required! However, we appreciate it if you want to share YouTunes with other creators."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I use this music for commercial purposes?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! Use our music for monetized YouTube videos, commercial projects, client work, or any business purpose."
-                }
-            }
-        ]
-    }
-    </script>
 
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background"></div>
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <div class="hero-badge">
-                <a href="https://www.producthunt.com/" target="_blank" class="ph-badge">
-                    <span class="ph-icon">▲</span> Featured on Product Hunt
-                </a>
-                <div class="launch-tag">🎉 Now Live!</div>
+            <div class="header-content">
+                <h1 class="logo">YouTunes</h1>
+                <p class="tagline">Free music for YouTube</p>
             </div>
-
-            <h1 class="hero-title">
-                Free Music for Your<br>
-                <span class="gradient-text">YouTube Videos</span>
-            </h1>
-
-            <p class="hero-description">
-                AI-generated, royalty-free background music updated daily.<br>
-                No copyright claims. No attribution. 100% free for creators.
-            </p>
-
-            <div class="hero-cta">
-                <a href="#browse-music" class="btn btn-primary">Browse Free Music</a>
-                <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
-            </div>
-
-            <div class="hero-features">
-                <div class="hero-feature">
-                    <div class="feature-icon">✓</div>
-                    <div>No Copyright Claims</div>
-                </div>
-                <div class="hero-feature">
-                    <div class="feature-icon">✓</div>
-                    <div>Commercial Use OK</div>
-                </div>
-                <div class="hero-feature">
-                    <div class="feature-icon">✓</div>
-                    <div>Updated Daily</div>
-                </div>
-                <div class="hero-feature">
-                    <div class="feature-icon">✓</div>
-                    <div>No Attribution</div>
-                </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by genre, mood, or channel..." aria-label="Search tracks">
+                <button id="searchBtn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
-    </section>
-
-    <!-- Social Proof Stats -->
-    <section class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number" id="track-count-hero">-</div>
-                    <div class="stat-label">Free Tracks</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="video-count-hero">-</div>
-                    <div class="stat-label">Videos Analyzed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Copyright-Free</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">Daily</div>
-                    <div class="stat-label">New Music</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </header>
 
     <!-- Main Content -->
-    <main class="main-content">
-        <!-- Features Section -->
-        <section class="features-section" id="how-it-works">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Why YouTube Creators Love YouTunes</h2>
-                    <p>Everything you need for stress-free background music</p>
+    <main class="main">
+        <div class="container">
+            <!-- Latest Tracks -->
+            <section class="section">
+                <h2 class="section-title">Latest Tracks</h2>
+                <div id="latestTracks" class="track-grid">
+                    <div class="loading">Loading tracks...</div>
                 </div>
+            </section>
 
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-emoji">🎵</div>
-                        <h3>AI-Generated Music</h3>
-                        <p>Unique tracks generated daily using cutting-edge AI, inspired by trending YouTube content. Never use the same music as everyone else.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-emoji">🚫</div>
-                        <h3>Zero Copyright Issues</h3>
-                        <p>No Content ID claims, no strikes, no takedowns. Our music is 100% safe for monetized YouTube videos and commercial projects.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-emoji">💰</div>
-                        <h3>Completely Free Forever</h3>
-                        <p>No subscriptions, no credits, no hidden fees. Download and use unlimited tracks for any project, commercial or personal.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-emoji">⚡</div>
-                        <h3>Fresh Content Daily</h3>
-                        <p>New music added every 24 hours based on YouTube's trending videos. Always on-trend, always relevant to your audience.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-emoji">🎨</div>
-                        <h3>Multiple Genres</h3>
-                        <p>Lo-fi, electronic, ambient, cinematic, and more. Find the perfect vibe for vlogs, gaming, tutorials, or any content type.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-emoji">📝</div>
-                        <h3>No Attribution Needed</h3>
-                        <p>Use our music without crediting us. While we appreciate shoutouts, you're never required to mention YouTunes in your videos.</p>
-                    </div>
+            <!-- Archive -->
+            <section class="section">
+                <h2 class="section-title">Archive</h2>
+                <div id="archiveTracks" class="track-list">
+                    <div class="loading">Loading archive...</div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Music Browser Section -->
-        <section class="browse-section" id="browse-music">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Browse Free Royalty-Free Music</h2>
-                    <p>Fresh tracks generated from today's trending YouTube videos</p>
-                </div>
-
-                <div id="tracks-container" class="tracks-grid">
-                    <div class="loading">Loading free music tracks...</div>
-                </div>
-
-                <div class="browse-cta">
-                    <button class="btn btn-outline" onclick="window.location.reload()">Load More Tracks</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Genres Section -->
-        <section class="genres-section" id="genres">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Music for Every Type of Content</h2>
-                    <p>AI-generated tracks across all popular genres</p>
-                </div>
-
-                <div class="genre-grid">
-                    <div class="genre-card">
-                        <div class="genre-icon">🎹</div>
-                        <h3>Lo-Fi Hip Hop</h3>
-                        <p>Perfect for study vlogs, chill gaming streams, and relaxed content. Mellow beats with smooth melodies.</p>
-                        <div class="genre-tags">
-                            <span>Study</span>
-                            <span>Chill</span>
-                            <span>Beats</span>
-                        </div>
-                    </div>
-
-                    <div class="genre-card">
-                        <div class="genre-icon">⚡</div>
-                        <h3>Electronic</h3>
-                        <p>Upbeat music for gaming, tech reviews, and energetic content. Modern and engaging soundscapes.</p>
-                        <div class="genre-tags">
-                            <span>Gaming</span>
-                            <span>Tech</span>
-                            <span>Energy</span>
-                        </div>
-                    </div>
-
-                    <div class="genre-card">
-                        <div class="genre-icon">🌊</div>
-                        <h3>Ambient</h3>
-                        <p>Atmospheric soundscapes for meditation, nature videos, ASMR, and calming content.</p>
-                        <div class="genre-tags">
-                            <span>Calm</span>
-                            <span>ASMR</span>
-                            <span>Nature</span>
-                        </div>
-                    </div>
-
-                    <div class="genre-card">
-                        <div class="genre-icon">🎬</div>
-                        <h3>Cinematic</h3>
-                        <p>Epic orchestral music for trailers, montages, and storytelling videos that need drama.</p>
-                        <div class="genre-tags">
-                            <span>Epic</span>
-                            <span>Trailer</span>
-                            <span>Drama</span>
-                        </div>
-                    </div>
-
-                    <div class="genre-card">
-                        <div class="genre-icon">🎸</div>
-                        <h3>Indie / Alt</h3>
-                        <p>Authentic indie sounds for vlogs, lifestyle content, and creative projects. Unique and fresh.</p>
-                        <div class="genre-tags">
-                            <span>Vlogs</span>
-                            <span>Lifestyle</span>
-                            <span>Creative</span>
-                        </div>
-                    </div>
-
-                    <div class="genre-card">
-                        <div class="genre-icon">🎺</div>
-                        <h3>Jazz / Bossa</h3>
-                        <p>Sophisticated jazz for cooking videos, cafe vlogs, and elegant presentations.</p>
-                        <div class="genre-tags">
-                            <span>Cooking</span>
-                            <span>Cafe</span>
-                            <span>Elegant</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works -->
-        <section class="process-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>How YouTunes Works</h2>
-                    <p>AI-powered music generation, updated every 24 hours</p>
-                </div>
-
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h3>Analyze Trending Videos</h3>
-                        <p>Our AI scans YouTube's trending videos daily to understand what content is popular and what music would complement it.</p>
-                    </div>
-
-                    <div class="process-arrow">→</div>
-
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h3>Generate Unique Music</h3>
-                        <p>Using advanced AI models, we create original, royalty-free music inspired by trending themes, genres, and moods.</p>
-                    </div>
-
-                    <div class="process-arrow">→</div>
-
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h3>Download & Use Freely</h3>
-                        <p>Browse, preview, and download tracks instantly. Use them in any video, stream, or project—no strings attached.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Proof / Testimonials -->
-        <section class="testimonials-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Loved by Content Creators</h2>
-                    <p>Join thousands of creators using YouTunes</p>
-                </div>
-
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"Finally, free music that doesn't sound like it's been used in 10,000 other videos. The AI-generated tracks are genuinely unique!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">JT</div>
-                            <div>
-                                <div class="author-name">Jamie Tech</div>
-                                <div class="author-role">Tech Reviewer • 50K subs</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"I was spending $15/month on music subscriptions. YouTunes saved my budget and the music quality is just as good. Game changer!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">MG</div>
-                            <div>
-                                <div class="author-name">Mike's Gaming</div>
-                                <div class="author-role">Gaming Streamer • 120K subs</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"No more copyright nightmares! I've used 20+ tracks and never received a single Content ID claim. This is what creators need."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">SC</div>
-                            <div>
-                                <div class="author-name">Sarah Creates</div>
-                                <div class="author-role">Lifestyle Vlogger • 85K subs</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- License Section -->
-        <section class="license-section" id="license">
-            <div class="container">
-                <div class="license-content">
-                    <div class="section-header">
-                        <h2>Simple, Clear License</h2>
-                        <p>No legal jargon. Here's exactly what you can do:</p>
-                    </div>
-
-                    <div class="license-grid">
-                        <div class="license-group">
-                            <h3 class="license-heading green">✓ You CAN</h3>
-                            <ul class="license-list">
-                                <li>Use in YouTube videos (monetized or not)</li>
-                                <li>Use in Twitch, TikTok, Facebook streams</li>
-                                <li>Use in podcasts and audio projects</li>
-                                <li>Use in commercial projects & ads</li>
-                                <li>Use in client work and paid projects</li>
-                                <li>Edit, remix, or modify the music</li>
-                                <li>Use in films, games, and apps</li>
-                                <li>Use in presentations & education</li>
-                            </ul>
-                        </div>
-
-                        <div class="license-group">
-                            <h3 class="license-heading red">✗ You CANNOT</h3>
-                            <ul class="license-list">
-                                <li>Claim the music as your own composition</li>
-                                <li>Resell or redistribute as stock music</li>
-                                <li>Register with Content ID systems</li>
-                                <li>Sub-license to others as music library</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="license-highlight">
-                        <h3>🎯 Bottom Line</h3>
-                        <p>Use our music however you want for your content. Don't try to sell it or claim you made it. That's it!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section" id="faq">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Everything you need to know about using YouTunes</p>
-                </div>
-
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3>Is this music really free for YouTube?</h3>
-                        <p>Yes! All music on YouTunes is 100% free to use in your YouTube videos, Twitch streams, podcasts, and any other content. No payment required, ever.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Will I get copyright claims using this music?</h3>
-                        <p>No. Our music is AI-generated and royalty-free. You won't receive copyright strikes or Content ID claims on YouTube. We guarantee it.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Do I need to credit or attribute YouTunes?</h3>
-                        <p>Nope! No attribution required. However, we'd love it if you want to share YouTunes with other creators who might benefit.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Can I use this music for commercial purposes?</h3>
-                        <p>Absolutely! Use our music for monetized YouTube videos, commercial projects, client work, advertisements, or any business purpose.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>What genres of background music are available?</h3>
-                        <p>Our AI generates music in various genres including lo-fi, electronic, ambient, cinematic, indie, jazz, and more based on trending video content.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>How often is new music added?</h3>
-                        <p>We analyze YouTube's trending videos daily and generate fresh, unique background music every 24 hours. Check back often for new tracks!</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>Can I download the music?</h3>
-                        <p>Yes! Simply click on any track to play it, then use your browser's download feature or right-click the audio player to save the file.</p>
-                    </div>
-
-                    <div class="faq-item">
-                        <h3>What makes YouTunes different from other free music sites?</h3>
-                        <p>Our music is 100% AI-generated and unique, inspired by current trends. You'll never hear the same track in multiple videos, making your content stand out.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Level Up Your Videos?</h2>
-                    <p>Start using free, royalty-free music in your content today</p>
-                    <div class="cta-buttons">
-                        <a href="#browse-music" class="btn btn-primary btn-large">Browse Free Music</a>
-                        <a href="https://twitter.com/intent/tweet?text=Just%20found%20YouTunes%20-%20free%20royalty-free%20music%20for%20YouTube!&url=https://youtunes.lol" target="_blank" class="btn btn-secondary btn-large">Share with Creators</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>YouTunes</h3>
-                    <p>Free royalty-free music for YouTube creators. Updated daily with AI-generated tracks.</p>
-                </div>
-
+                <p>&copy; 2025 YouTunes. All tracks are free to use, no attribution required.</p>
                 <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Product</h4>
-                        <a href="#browse-music">Browse Music</a>
-                        <a href="#genres">Genres</a>
-                        <a href="#how-it-works">How It Works</a>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Legal</h4>
-                        <a href="#license">License</a>
-                        <a href="#faq">FAQ</a>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Community</h4>
-                        <a href="https://twitter.com/" target="_blank">Twitter</a>
-                        <a href="https://www.producthunt.com/" target="_blank">Product Hunt</a>
-                        <a href="https://github.com/" target="_blank">GitHub</a>
-                    </div>
+                    <a href="#faq">FAQ</a>
+                    <a href="#license">License</a>
+                    <a href="https://github.com/roland-id-au/youtunes-lol" target="_blank">GitHub</a>
                 </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 YouTunes. All music is AI-generated and copyright-free.</p>
-                <p class="footer-small">Use freely for YouTube videos, streams, podcasts, and commercial projects. No attribution required.</p>
             </div>
         </div>
     </footer>
 
-    <script type="module" src="/app.js"></script>
+    <!-- Audio Player -->
+    <div id="player" class="player hidden">
+        <div class="player-content">
+            <div class="player-info">
+                <div class="player-title" id="playerTitle">Track Title</div>
+                <div class="player-meta" id="playerMeta">Genre • Mood</div>
+            </div>
+            <div class="player-controls">
+                <button id="playPauseBtn" class="control-btn" aria-label="Play/Pause">
+                    <svg id="playIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg id="pauseIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                </button>
+                <div class="player-progress">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+                <button id="downloadBtn" class="control-btn" aria-label="Download">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                </button>
+                <button id="closePlayerBtn" class="control-btn" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <audio id="audioElement"></audio>
+    </div>
+
+    <script src="/app.js"></script>
 </body>
 </html>

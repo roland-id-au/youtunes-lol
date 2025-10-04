@@ -232,7 +232,9 @@ export async function processYouTubeVideos(env) {
                     mood: metadata.mood,
                     bpm: metadata.bpm,
                     description: metadata.description,
-                    audio_url: audioUrl
+                    audio_url: audioUrl,
+                    channel_name: video.channel_title,
+                    video_title: video.title
                 })
                 .select()
                 .single();

@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS tracks (
     bpm INTEGER,
     description TEXT,
     audio_url TEXT,
+    channel_name VARCHAR(255),
+    video_title TEXT,
     generation_status VARCHAR(50) DEFAULT 'pending', -- pending, processing, completed, failed
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()

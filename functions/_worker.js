@@ -1,5 +1,36 @@
 import { createClient } from '@supabase/supabase-js';
 
+// Upload audio to Cloudflare R2
+async function uploadToR2(bucket, key, audioData, contentType = 'audio/mpeg') {
+    if (!bucket) {
+        console.error('R2 bucket not available');
+        return null;
+    }
+
+    try {
+        await bucket.put(key, audioData, {
+            httpMetadata: {
+                contentType: contentType,
+            },
+        });
+
+        // Return public URL (will be served via custom domain)
+        return `https://youtunes.lol/music/${key}`;
+    } catch (error) {
+        console.error('R2 upload error:', error);
+        return null;
+    }
+}
+
+// Download audio from URL and return as ArrayBuffer
+async function downloadAudio(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Failed to download audio: ${response.statusText}`);
+    }
+    return await response.arrayBuffer();
+}
+
 // Discord webhook logger
 async function logToDiscord(webhookUrl, message, color = 0x6366f1) {
     if (!webhookUrl) return;
@@ -123,6 +154,7 @@ export async function generateMusicMetadata(videoData, openaiKey) {
 export async function processYouTubeVideos(env) {
     const supabase = createClient(env.SUPABASE_URL, env.SUPABASE_SERVICE_KEY);
     const webhookUrl = env.DISCORD_WEBHOOK_URL;
+    const r2Bucket = env.MUSIC_BUCKET;
 
     await logToDiscord(webhookUrl, '🚀 **Starting daily music generation**\nFetching trending YouTube videos...', 0x10b981);
 
@@ -169,8 +201,21 @@ export async function processYouTubeVideos(env) {
             let audioUrl = null;
             try {
                 await logToDiscord(webhookUrl, `🎵 Generating AI music (this may take 30-60s)...`, 0xec4899);
-                audioUrl = await generateMusic(video, env.REPLICATE_API_KEY);
-                await logToDiscord(webhookUrl, `✨ Music generation complete!`, 0x10b981);
+                const replicateAudioUrl = await generateMusic(video, env.REPLICATE_API_KEY);
+                await logToDiscord(webhookUrl, `✨ Music generated! Uploading to R2...`, 0x10b981);
+
+                // Download and upload to R2
+                const audioData = await downloadAudio(replicateAudioUrl);
+                const trackKey = `${Date.now()}-${video.video_id}.mp3`;
+                audioUrl = await uploadToR2(r2Bucket, trackKey, audioData);
+
+                if (audioUrl) {
+                    await logToDiscord(webhookUrl, `☁️ Uploaded to R2 storage!`, 0x10b981);
+                } else {
+                    // Fallback to Replicate URL if R2 upload fails
+                    audioUrl = replicateAudioUrl;
+                    await logToDiscord(webhookUrl, `⚠️ R2 upload failed, using direct URL`, 0xfbbf24);
+                }
             } catch (error) {
                 console.error('Music generation failed:', error);
                 await logToDiscord(webhookUrl, `⚠️ Music generation failed: ${error.message}\nWill retry later`, 0xef4444);
